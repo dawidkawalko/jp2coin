@@ -5,9 +5,11 @@ import reportWebVitals from "./reportWebVitals";
 import HomePage from "./pages/HomePage";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import LandingPage from "./App";
 
 const darkTheme = createTheme({
+  typography: {
+    fontFamily: "Roboto",
+  },
   palette: {
     mode: "dark",
   },
@@ -19,8 +21,10 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    {/* <HomePage /> */}
-    <LandingPage />
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <HomePage />
+    </ThemeProvider>
   </React.StrictMode>
 );
 

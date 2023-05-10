@@ -42,7 +42,11 @@ const LandingPage = () => {
                 <Typography variant="h5" component="h2" gutterBottom>
                   What is JP2 Coin?
                 </Typography>
-                <Typography variant="body1" color="textSecondary">
+                <Typography
+                  variant="body1"
+                  color="textPrimary"
+                  sx={{ lineHeight: 1.6 }}
+                >
                   JP2 Coin is a revolutionary cryptocurrency designed for fast
                   and secure transactions. Built on the latest blockchain
                   technology, it offers a decentralized and transparent way to
@@ -62,7 +66,11 @@ const LandingPage = () => {
                 <Typography variant="h5" component="h2" gutterBottom>
                   Why Choose JP2 Coin?
                 </Typography>
-                <Typography variant="body1" color="textSecondary">
+                <Typography
+                  variant="body1"
+                  color="textPrimary"
+                  sx={{ lineHeight: 1.6 }}
+                >
                   - Lightning-fast transactions
                   <br />
                   - Enhanced security and privacy

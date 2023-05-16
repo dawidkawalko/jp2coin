@@ -11,7 +11,6 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import CurrencyBitcoinIcon from "@mui/icons-material/CurrencyBitcoin";
 
 const pages = ["About", "Uniswap", "Referrals", "Blog"];
 const settings = ["My wallet", "Referrals", "Loyalty", "Rewards", "Logout"];
@@ -41,11 +40,15 @@ const TopBar = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="sticky" elevation={10}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <CurrencyBitcoinIcon
-            sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+          <Box
+            mr={2}
+            component="img"
+            alt="Top bar icon"
+            src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81pXzNi-vVALOVUNO1vmxu2ZaNdCNB97brn3sQ2zU6bA1KHbm95CAlyMlrcptr5BuN0zThcUNOxu-HeCE6wnEFQyo-kJfA=s1600"
+            sx={{ height: "32px" }}
           />
           <Typography
             variant="h6"
@@ -103,9 +106,6 @@ const TopBar = () => {
               ))}
             </Menu>
           </Box>
-          <CurrencyBitcoinIcon
-            sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
-          />
           <Typography
             variant="h5"
             noWrap
@@ -131,7 +131,9 @@ const TopBar = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, mx: 1, color: "white", display: "block" }}
               >
-                {page.toLocaleUpperCase()}
+                <Typography fontSize={20}>
+                  {page.toLocaleUpperCase()}
+                </Typography>
               </Button>
             ))}
           </Box>

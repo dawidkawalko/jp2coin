@@ -11,7 +11,14 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import ThemeToggler from "../ThemeToggler";
 
-const pages = ["get your coin", "uniswap", "whitepaper", "nft", "contact"];
+const pages = [
+  "get your coin",
+  // "uniswap",
+  "whitepaper",
+  "nft",
+  "contact",
+];
+
 const title = "JP2Coin";
 
 const smoothScroll = (anchor: string) => {

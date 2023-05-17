@@ -50,7 +50,7 @@ const StepsSection = () => {
           <br />
           Swap ETH for JP2 and wait for the transaction to complete.
         </Section>
-        <Uniswap />
+        {/* <Uniswap /> */}
       </Grid>
     </>
   );

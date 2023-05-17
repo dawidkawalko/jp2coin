@@ -1,4 +1,5 @@
 import {
+  Box,
   CssBaseline,
   ThemeProvider,
   createTheme,
@@ -8,10 +9,23 @@ import { useEffect, useMemo, useState } from "react";
 import { TopBar } from "./TopBar";
 import { HomePage } from "../pages/HomePage";
 import { ColorModeContext } from "../theme/color-context";
+import LoadingPage from "../pages/LoadingPage/LoadingPage";
+import "./App.css";
 
 const App = () => {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
   const [mode, setMode] = useState<"light" | "dark">();
+  const [isLoading, setLoading] = useState(true);
+
+  function loadingDelay() {
+    return new Promise<void>((resolve) => setTimeout(() => resolve(), 1500));
+  }
+
+  useEffect(() => {
+    loadingDelay().then(() => {
+      setLoading(false);
+    });
+  }, []);
 
   useEffect(() => {
     const savedMode = localStorage.getItem("colorMode");
@@ -53,9 +67,15 @@ const App = () => {
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <TopBar />
-        <HomePage />
+        {isLoading ? (
+          <LoadingPage />
+        ) : (
+          <Box className="page">
+            <CssBaseline />
+            <TopBar />
+            <HomePage />
+          </Box>
+        )}
       </ThemeProvider>
     </ColorModeContext.Provider>
   );

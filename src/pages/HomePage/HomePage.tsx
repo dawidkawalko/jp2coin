@@ -11,7 +11,6 @@ import {
   WhitepaperSection,
 } from "./sections";
 import { GridDivider } from "../../components/GridDivider";
-import LazyLoad from "../../components/LazyLoad";
 
 const HomePage = () => {
   return (
@@ -31,7 +30,6 @@ const HomePage = () => {
         <NftSection />
         <GridDivider />
 
-        <LazyLoad />
         <ContactSection />
         <FooterSection />
       </Grid>

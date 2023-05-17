@@ -12,7 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import ThemeToggler from "../ThemeToggler";
 
 const pages = ["get your coin", "uniswap", "whitepaper", "nft", "contact"];
-const title = "JP2 COIN";
+const title = "JP2Coin";
 
 const TopBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -48,7 +48,7 @@ const TopBar = () => {
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
               fontWeight: 700,
-              letterSpacing: ".3rem",
+              letterSpacing: ".2rem",
               color: "inherit",
               textDecoration: "none",
             }}
@@ -100,7 +100,7 @@ const TopBar = () => {
             </Menu>
           </Box>
           <Typography
-            variant="h5"
+            variant="h6"
             noWrap
             component="a"
             href=""
@@ -110,7 +110,7 @@ const TopBar = () => {
               flexGrow: 1,
               fontFamily: "monospace",
               fontWeight: 700,
-              letterSpacing: ".3rem",
+              letterSpacing: ".2rem",
               color: "inherit",
               textDecoration: "none",
             }}

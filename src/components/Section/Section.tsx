@@ -16,6 +16,7 @@ const Section = ({ title, children }: SectionProps) => {
       p={5}
       mb={3}
       sx={{
+        borderRadius: 3,
         ":hover": {
           boxShadow: 10,
         },

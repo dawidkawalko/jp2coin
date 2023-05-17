@@ -12,6 +12,7 @@ const StatsSection = () => {
         py={5}
         mt={{ xs: 5 }}
         sx={{
+          borderRadius: 3,
           ":hover": {
             boxShadow: 10,
           },

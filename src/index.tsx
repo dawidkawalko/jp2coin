@@ -2,19 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import { HomePage } from "./pages/HomePage";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
-import { TopBar } from "./components/TopBar";
-
-const darkTheme = createTheme({
-  typography: {
-    fontFamily: "Roboto",
-  },
-  palette: {
-    mode: "dark",
-  },
-});
+import App from "./components/App";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -22,11 +10,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={darkTheme}>
-      <CssBaseline />
-      <TopBar />
-      <HomePage />
-    </ThemeProvider>
+    <App />
   </React.StrictMode>
 );
 

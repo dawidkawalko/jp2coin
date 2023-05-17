@@ -5,7 +5,7 @@ import { Uniswap } from "../../../components/Uniswap";
 const StepsSection = () => {
   return (
     <>
-      <Box className="anchor" id="uniswap"></Box>
+      <Box className="anchor" id="get your coin"></Box>
       <Grid item container justifyContent="center" my={5}>
         <Grid item xs={10}>
           <Typography
@@ -35,6 +35,7 @@ const StepsSection = () => {
           Connect your wallet to the Ethereum mainnet. <br />
           Buy ETH from a trusted exchange or peer-to-peer platform.
         </Section>
+
         <Section title="Step 3: Swap for JP2">
           Go to{" "}
           <a

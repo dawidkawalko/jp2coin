@@ -16,7 +16,14 @@ a.styled:hover {
 .anchor {
   display: block;
   position: relative;
-  top: -32px;
+  top: -65px;
+  visibility: hidden;
+}
+
+.anchor-uniswap {
+  display: block;
+  position: relative;
+  top: -150px;
   visibility: hidden;
 }
 

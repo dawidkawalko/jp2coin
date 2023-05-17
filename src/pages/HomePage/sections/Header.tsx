@@ -35,7 +35,7 @@ const HeaderSection = () => {
           <Box
             component="img"
             alt="Coin"
-            src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81pXzNi-vVALOVUNO1vmxu2ZaNdCNB97brn3sQ2zU6bA1KHbm95CAlyMlrcptr5BuN0zThcUNOxu-HeCE6wnEFQyo-kJfA=s1600"
+            src="%PUBLIC_URL%/assets/coin_fullres.png"
             sx={{ height: { xs: "150px", sm: "200px" } }}
           />
         </FloatingBox>

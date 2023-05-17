@@ -5,7 +5,7 @@ import { Uniswap } from "../../../components/Uniswap";
 const StepsSection = () => {
   return (
     <>
-      <Box className="anchor" id="get your coin"></Box>
+      <Box className="anchor" id="getyourcoin"></Box>
       <Grid item container justifyContent="center" my={5}>
         <Grid item xs={10}>
           <Typography

@@ -10,7 +10,6 @@ import { TopBar } from "./TopBar";
 import { HomePage } from "../pages/HomePage";
 import { ColorModeContext } from "../theme/color-context";
 import LoadingPage from "../pages/LoadingPage/LoadingPage";
-import "./App.css";
 
 const App = () => {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");

@@ -14,6 +14,12 @@ import ThemeToggler from "../ThemeToggler";
 const pages = ["get your coin", "uniswap", "whitepaper", "nft", "contact"];
 const title = "JP2Coin";
 
+const smoothScroll = (anchor: string) => {
+  document.querySelector(`#${anchor.replaceAll(" ", "")}`)?.scrollIntoView({
+    behavior: "smooth",
+  });
+};
+
 const TopBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
@@ -35,7 +41,7 @@ const TopBar = () => {
             mr={2}
             component="img"
             alt="Top bar icon"
-            src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81pXzNi-vVALOVUNO1vmxu2ZaNdCNB97brn3sQ2zU6bA1KHbm95CAlyMlrcptr5BuN0zThcUNOxu-HeCE6wnEFQyo-kJfA=s1600"
+            src="%PUBLIC_URL%/assets/coin_fullres.png"
             sx={{ height: "32px" }}
           />
           <Typography
@@ -88,9 +94,12 @@ const TopBar = () => {
               {pages.map((page) => (
                 <MenuItem
                   component={Button}
+                  onClick={() => {
+                    handleCloseNavMenu();
+                    smoothScroll(page);
+                  }}
                   href={`#${page}`}
                   key={page}
-                  onClick={handleCloseNavMenu}
                 >
                   <Typography textAlign="center">
                     {page.toLocaleUpperCase()}
@@ -121,8 +130,10 @@ const TopBar = () => {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
-                href={`#${page}`}
+                onClick={() => {
+                  handleCloseNavMenu();
+                  smoothScroll(page);
+                }}
                 sx={{ my: 2, mx: 1, color: "white", display: "block" }}
               >
                 <Typography fontSize={15}>

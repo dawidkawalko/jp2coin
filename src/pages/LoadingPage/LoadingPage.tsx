@@ -21,7 +21,7 @@ const LoadingPage = () => {
         className="loading"
         component="img"
         alt="Loading"
-        src="%PUBLIC_URL%/assets/coin_fullres.png"
+        src="/assets/coin_fullres.png"
         sx={{ height: { xs: "300px", md: "400px", lg: "500px" } }}
       />
     </Box>

@@ -41,7 +41,7 @@ const TopBar = () => {
             mr={2}
             component="img"
             alt="Top bar icon"
-            src="%PUBLIC_URL%/assets/coin_fullres.png"
+            src="/assets/coin_fullres.png"
             sx={{ height: "32px" }}
           />
           <Typography

@@ -35,7 +35,7 @@ const HeaderSection = () => {
           <Box
             component="img"
             alt="Coin"
-            src="%PUBLIC_URL%/assets/coin_fullres.png"
+            src="/assets/coin_fullres.png"
             sx={{ height: { xs: "150px", sm: "200px" } }}
           />
         </FloatingBox>

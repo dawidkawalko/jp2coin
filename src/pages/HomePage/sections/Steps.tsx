@@ -11,7 +11,7 @@ const StepsSection = () => {
           <Typography
             fontSize={{ xs: 30, md: 40 }}
             textAlign="center"
-            fontWeight={600}
+            fontWeight={700}
           >
             Get your JP2Coin in three simple steps
           </Typography>

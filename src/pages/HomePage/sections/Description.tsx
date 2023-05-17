@@ -8,7 +8,7 @@ const DescriptionSection = () => {
           <Typography
             fontSize={{ xs: 30, md: 40 }}
             textAlign="center"
-            fontWeight={600}
+            fontWeight={700}
           >
             Embodying Pope John Paul II in Cryptocurrency
           </Typography>
@@ -26,7 +26,7 @@ const DescriptionSection = () => {
           <Typography
             fontSize={{ xs: 20, md: 25 }}
             textAlign="center"
-            fontWeight={600}
+            fontWeight={700}
           >
             JP2Coin - where faith meets innovation
           </Typography>

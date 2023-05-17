@@ -15,7 +15,7 @@ const HeaderSection = () => {
         mb={{ xs: 5, md: 10 }}
         textAlign={{ xs: "center", sm: "left" }}
       >
-        <Typography fontSize={{ xs: 40, md: 60 }} fontWeight={500}>
+        <Typography fontSize={{ xs: 40, md: 60 }} fontWeight={700}>
           The future of Faith
         </Typography>
         <Typography

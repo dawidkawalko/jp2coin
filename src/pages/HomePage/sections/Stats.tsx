@@ -19,13 +19,13 @@ const StatsSection = () => {
         }}
       >
         <Box>
-          <Typography fontSize={{ xs: 40, md: 50 }} fontWeight={500}>
+          <Typography fontSize={{ xs: 40, md: 50 }} fontWeight={700}>
             <CountUp end={2137} duration={3} />B
           </Typography>
           <Typography fontSize={{ xs: 15, md: 20 }}>Total supply</Typography>
         </Box>
         <Box>
-          <Typography fontSize={{ xs: 40, md: 50 }} fontWeight={500}>
+          <Typography fontSize={{ xs: 40, md: 50 }} fontWeight={700}>
             <CountUp end={92} duration={5} />%
           </Typography>
           <Typography fontSize={{ xs: 15, md: 20 }}>Liquidity</Typography>

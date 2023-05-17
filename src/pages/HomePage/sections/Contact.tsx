@@ -9,7 +9,7 @@ const ContactSection = () => {
           <Typography
             fontSize={{ xs: 30, md: 40 }}
             textAlign="center"
-            fontWeight={600}
+            fontWeight={700}
           >
             Contact
           </Typography>

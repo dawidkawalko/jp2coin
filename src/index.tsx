@@ -2,9 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import HomePage from "./pages/HomePage";
+import { HomePage } from "./pages/HomePage";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+import { TopBar } from "./components/TopBar";
 
 const darkTheme = createTheme({
   typography: {
@@ -23,6 +24,7 @@ root.render(
   <React.StrictMode>
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
+      <TopBar />
       <HomePage />
     </ThemeProvider>
   </React.StrictMode>

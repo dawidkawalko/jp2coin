@@ -9,12 +9,14 @@ import { useEffect, useMemo, useState } from "react";
 import { TopBar } from "./TopBar";
 import { HomePage } from "../pages/HomePage";
 import { ColorModeContext } from "../theme/color-context";
-import LoadingPage from "../pages/LoadingPage/LoadingPage";
+import { LoadingPage } from "../pages/LoadingPage";
+import useAppImages from "../hooks/useAppImages";
 
 const App = () => {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
   const [mode, setMode] = useState<"light" | "dark">();
   const [isLoading, setLoading] = useState(true);
+  const { loaded } = useAppImages();
 
   function loadingDelay() {
     return new Promise<void>((resolve) => setTimeout(() => resolve(), 1500));
@@ -66,7 +68,7 @@ const App = () => {
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
-        {isLoading ? (
+        {!loaded || isLoading ? (
           <LoadingPage />
         ) : (
           <Box className="page">

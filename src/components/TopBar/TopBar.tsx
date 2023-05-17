@@ -10,6 +10,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import ThemeToggler from "../ThemeToggler";
+import useAppImages from "../../hooks/useAppImages";
 
 const pages = [
   "get your coin",
@@ -40,6 +41,8 @@ const TopBar = () => {
     setAnchorElNav(null);
   };
 
+  const { appImages } = useAppImages();
+
   return (
     <AppBar position="sticky" elevation={15}>
       <Container maxWidth="xl">
@@ -48,7 +51,7 @@ const TopBar = () => {
             mr={2}
             component="img"
             alt="Top bar icon"
-            src="/assets/coin_fullres.png"
+            src={appImages.coin.src}
             sx={{ height: "32px" }}
           />
           <Typography

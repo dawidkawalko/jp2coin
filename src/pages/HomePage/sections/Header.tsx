@@ -1,7 +1,10 @@
 import { Box, Grid, Typography } from "@mui/material";
 import { FloatingBox } from "../../../components/FloatingBox";
+import useAppImages from "../../../hooks/useAppImages";
 
 const HeaderSection = () => {
+  const { appImages } = useAppImages();
+
   return (
     <>
       <Grid
@@ -35,7 +38,7 @@ const HeaderSection = () => {
           <Box
             component="img"
             alt="Coin"
-            src="/assets/coin_fullres.png"
+            src={appImages.coin.src}
             sx={{ height: { xs: "150px", sm: "200px" } }}
           />
         </FloatingBox>

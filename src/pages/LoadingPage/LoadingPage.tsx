@@ -1,7 +1,10 @@
 import { Box, Paper } from "@mui/material";
 import "./LoadingPage.css";
+import useAppImages from "../../hooks/useAppImages";
 
 const LoadingPage = () => {
+  const { appImages } = useAppImages();
+
   return (
     <Box
       component={Paper}
@@ -21,7 +24,7 @@ const LoadingPage = () => {
         className="loading"
         component="img"
         alt="Loading"
-        src="/assets/coin_fullres.png"
+        src={appImages.coin.src}
         sx={{ height: { xs: "300px", md: "400px", lg: "500px" } }}
       />
     </Box>

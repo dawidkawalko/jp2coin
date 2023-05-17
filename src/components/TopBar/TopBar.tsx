@@ -105,7 +105,6 @@ const TopBar = () => {
                     handleCloseNavMenu();
                     smoothScroll(page);
                   }}
-                  href={`#${page}`}
                   key={page}
                 >
                   <Typography textAlign="center">

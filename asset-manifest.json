@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/jp2coin/static/css/main.ef2d251c.css",
-    "main.js": "/jp2coin/static/js/main.9a681e16.js",
+    "main.css": "/jp2coin/static/css/main.93e2c54b.css",
+    "main.js": "/jp2coin/static/js/main.f5179e0e.js",
     "static/js/787.45e5181b.chunk.js": "/jp2coin/static/js/787.45e5181b.chunk.js",
     "index.html": "/jp2coin/index.html",
-    "main.ef2d251c.css.map": "/jp2coin/static/css/main.ef2d251c.css.map",
-    "main.9a681e16.js.map": "/jp2coin/static/js/main.9a681e16.js.map",
+    "main.93e2c54b.css.map": "/jp2coin/static/css/main.93e2c54b.css.map",
+    "main.f5179e0e.js.map": "/jp2coin/static/js/main.f5179e0e.js.map",
     "787.45e5181b.chunk.js.map": "/jp2coin/static/js/787.45e5181b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef2d251c.css",
-    "static/js/main.9a681e16.js"
+    "static/css/main.93e2c54b.css",
+    "static/js/main.f5179e0e.js"
   ]
 }

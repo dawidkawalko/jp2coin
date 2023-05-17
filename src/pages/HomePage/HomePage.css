@@ -3,14 +3,21 @@
   animation-duration: 1s;
 } */
 
-a,
-a:visited {
+a.styled,
+a.styled:visited {
   text-decoration: none;
   color: gold;
 }
 
-a:hover {
+a.styled:hover {
   color: goldenrod;
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -32px;
+  visibility: hidden;
 }
 
 @keyframes fadein {

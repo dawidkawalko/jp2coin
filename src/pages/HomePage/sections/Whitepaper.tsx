@@ -1,8 +1,9 @@
-import { Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 
 const WhitepaperSection = () => {
   return (
     <>
+      <Box className="anchor" id="whitepaper"></Box>
       <Grid item container justifyContent="center" my={5}>
         <Grid item xs={10}>
           <Typography

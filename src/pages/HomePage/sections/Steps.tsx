@@ -1,10 +1,11 @@
-import { Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { Section } from "../../../components/Section";
 import { Uniswap } from "../../../components/Uniswap";
 
 const StepsSection = () => {
   return (
     <>
+      <Box className="anchor" id="uniswap"></Box>
       <Grid item container justifyContent="center" my={5}>
         <Grid item xs={10}>
           <Typography
@@ -19,7 +20,12 @@ const StepsSection = () => {
       <Grid item xs={12} mb={5}>
         <Section title="Step 1: Install MetaMask">
           Go to{" "}
-          <a href="https://metamask.io/" target="_blank" rel="noreferrer">
+          <a
+            className="styled"
+            href="https://metamask.io/"
+            target="_blank"
+            rel="noreferrer"
+          >
             metamask.io
           </a>{" "}
           and install the MetaMask extension for your browser. <br />
@@ -31,7 +37,12 @@ const StepsSection = () => {
         </Section>
         <Section title="Step 3: Swap for JP2">
           Go to{" "}
-          <a href="https://app.uniswap.org/" target="_blank" rel="noreferrer">
+          <a
+            className="styled"
+            href="https://app.uniswap.org/"
+            target="_blank"
+            rel="noreferrer"
+          >
             app.uniswap.org
           </a>{" "}
           and connect your MetaMask wallet.

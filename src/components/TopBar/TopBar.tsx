@@ -10,7 +10,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 
-const pages = ["About", "Uniswap", "Referrals", "Blog"];
+const pages = ["uniswap", "whitepaper", "nft", "contact"];
 const title = "JP2 COIN";
 
 const TopBar = () => {
@@ -85,7 +85,12 @@ const TopBar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem
+                  component={Button}
+                  href={`#${page}`}
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                >
                   <Typography textAlign="center">
                     {page.toLocaleUpperCase()}
                   </Typography>
@@ -116,6 +121,7 @@ const TopBar = () => {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
+                href={`#${page}`}
                 sx={{ my: 2, mx: 1, color: "white", display: "block" }}
               >
                 <Typography fontSize={15}>

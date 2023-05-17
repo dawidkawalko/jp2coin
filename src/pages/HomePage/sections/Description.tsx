@@ -28,7 +28,7 @@ const DescriptionSection = () => {
             textAlign="center"
             fontWeight={600}
           >
-            JP2 Coin - where faith meets innovation
+            JP2Coin - where faith meets innovation
           </Typography>
         </Grid>
       </Grid>

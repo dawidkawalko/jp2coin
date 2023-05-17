@@ -4,21 +4,39 @@ import { FloatingBox } from "../../../components/FloatingBox";
 const HeaderSection = () => {
   return (
     <>
-      <Grid item xs={8} mt={20} mb={10}>
-        <Typography fontSize={60} fontWeight={500}>
+      <Grid
+        item
+        sm={8}
+        xs={12}
+        mt={{ xs: 5, sm: 10, md: 20 }}
+        mb={{ xs: 5, md: 10 }}
+        textAlign={{ xs: "center", sm: "left" }}
+      >
+        <Typography fontSize={{ xs: 40, md: 60 }} fontWeight={500}>
           The future of Faith
         </Typography>
-        <Typography pl={5} mt={-3} fontSize={40} fontWeight={300}>
+        <Typography
+          pl={5}
+          mt={-3}
+          fontSize={{ xs: 30, md: 40 }}
+          fontWeight={300}
+        >
           . . . is in your hands
         </Typography>
       </Grid>
-      <Grid item xs={4} mt={15} textAlign="center">
+      <Grid
+        item
+        sm={4}
+        xs={12}
+        mt={{ xs: 0, sm: 5, md: 15 }}
+        textAlign="center"
+      >
         <FloatingBox durationMs={3500}>
           <Box
             component="img"
             alt="Coin"
             src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81pXzNi-vVALOVUNO1vmxu2ZaNdCNB97brn3sQ2zU6bA1KHbm95CAlyMlrcptr5BuN0zThcUNOxu-HeCE6wnEFQyo-kJfA=s1600"
-            height={"200px"}
+            sx={{ height: { xs: "150px", sm: "200px" } }}
           />
         </FloatingBox>
       </Grid>

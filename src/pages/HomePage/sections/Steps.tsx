@@ -7,7 +7,11 @@ const StepsSection = () => {
     <>
       <Grid item container justifyContent="center" my={5}>
         <Grid item xs={10}>
-          <Typography fontSize={40} textAlign="center" fontWeight={600}>
+          <Typography
+            fontSize={{ xs: 30, md: 40 }}
+            textAlign="center"
+            fontWeight={600}
+          >
             Get your JP2Coin in three simple steps
           </Typography>
         </Grid>

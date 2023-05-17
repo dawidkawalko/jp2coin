@@ -22,12 +22,12 @@ const Section = ({ title, children }: SectionProps) => {
       }}
     >
       <div>
-        <Typography fontSize={40} fontWeight={500}>
+        <Typography fontSize={{ xs: 30, md: 40 }} fontWeight={500}>
           {title}
         </Typography>
       </div>
       <div>
-        <Typography fontSize={30}>{children}</Typography>
+        <Typography fontSize={{ xs: 20, md: 25 }}>{children}</Typography>
       </div>
     </Box>
   );

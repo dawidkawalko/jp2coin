@@ -10,6 +10,7 @@ const StatsSection = () => {
         display="flex"
         justifyContent="space-around"
         py={5}
+        mt={{ xs: 5 }}
         sx={{
           ":hover": {
             boxShadow: 10,
@@ -17,16 +18,16 @@ const StatsSection = () => {
         }}
       >
         <Box>
-          <Typography fontSize={50} fontWeight={500}>
-            <CountUp end={2137000000000} duration={3} />
+          <Typography fontSize={{ xs: 40, md: 50 }} fontWeight={500}>
+            <CountUp end={2137} duration={3} />B
           </Typography>
-          <Typography fontSize={20}>Total supply</Typography>
+          <Typography fontSize={{ xs: 15, md: 20 }}>Total supply</Typography>
         </Box>
         <Box>
-          <Typography fontSize={50} fontWeight={500}>
+          <Typography fontSize={{ xs: 40, md: 50 }} fontWeight={500}>
             <CountUp end={92} duration={5} />%
           </Typography>
-          <Typography fontSize={20}>Liquidity</Typography>
+          <Typography fontSize={{ xs: 15, md: 20 }}>Liquidity</Typography>
         </Box>
       </Box>
     </Grid>

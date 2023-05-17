@@ -14,7 +14,7 @@ import { GridDivider } from "../../components/GridDivider";
 
 const HomePage = () => {
   return (
-    <Container maxWidth="lg">
+    <Container>
       <Grid container>
         <HeaderSection />
         <StatsSection />

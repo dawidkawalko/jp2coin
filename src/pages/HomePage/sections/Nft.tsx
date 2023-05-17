@@ -4,10 +4,14 @@ const NftSection = () => {
   return (
     <Grid item container justifyContent="center" my={5}>
       <Grid item xs={10}>
-        <Typography fontSize={40} textAlign="center" fontWeight={600}>
+        <Typography
+          fontSize={{ xs: 30, md: 40 }}
+          textAlign="center"
+          fontWeight={600}
+        >
           NFT
         </Typography>
-        <Typography fontSize={25} textAlign="center">
+        <Typography fontSize={{ xs: 20, md: 25 }} textAlign="center">
           In preparation...
         </Typography>
       </Grid>

@@ -22,9 +22,9 @@ const pages = [
 const title = "JP2Coin";
 
 const smoothScroll = (anchor: string) => {
-  document.querySelector(`#${anchor.replaceAll(" ", "")}`)?.scrollIntoView({
-    behavior: "smooth",
-  });
+  document
+    .querySelector(`#${anchor.replaceAll(" ", "")}`)
+    ?.scrollIntoView(true);
 };
 
 const TopBar = () => {

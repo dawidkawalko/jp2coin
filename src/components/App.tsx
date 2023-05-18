@@ -60,6 +60,9 @@ const App = () => {
         },
         palette: {
           mode: mode,
+          secondary: {
+            main: "#ffd700",
+          },
         },
       }),
     [mode]

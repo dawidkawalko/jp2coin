@@ -8,6 +8,7 @@ import {
   NftSection,
   StatsSection,
   StepsSection,
+  UniswapSection,
   WhitepaperSection,
 } from "./sections";
 import { GridDivider } from "../../components/GridDivider";
@@ -22,6 +23,7 @@ const HomePage = () => {
         <GridDivider />
 
         <StepsSection />
+        <UniswapSection />
         <GridDivider />
 
         <WhitepaperSection />

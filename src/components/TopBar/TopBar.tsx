@@ -12,20 +12,13 @@ import MenuItem from "@mui/material/MenuItem";
 import ThemeToggler from "../ThemeToggler";
 import useAppImages from "../../hooks/useAppImages";
 
-const pages = [
-  "get your coin",
-  // "uniswap",
-  "whitepaper",
-  "nft",
-  "contact",
-];
-
+const pages = ["get your coin", "uniswap", "whitepaper", "nft", "contact"];
 const title = "JP2Coin";
 
 const smoothScroll = (anchor: string) => {
   document
     .querySelector(`#${anchor.replaceAll(" ", "")}`)
-    ?.scrollIntoView(true);
+    ?.scrollIntoView({ behavior: "smooth" });
 };
 
 const TopBar = () => {
@@ -44,7 +37,7 @@ const TopBar = () => {
   const { appImages } = useAppImages();
 
   return (
-    <AppBar position="sticky" elevation={15}>
+    <AppBar position="sticky" elevation={5}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box
@@ -65,7 +58,7 @@ const TopBar = () => {
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".2rem",
-              color: "inherit",
+              color: "gold",
               textDecoration: "none",
             }}
           >
@@ -145,7 +138,7 @@ const TopBar = () => {
                 }}
                 sx={{ my: 2, mx: 1, color: "white", display: "block" }}
               >
-                <Typography fontSize={15}>
+                <Typography fontSize={18} fontWeight={500}>
                   {page.toLocaleUpperCase()}
                 </Typography>
               </Button>

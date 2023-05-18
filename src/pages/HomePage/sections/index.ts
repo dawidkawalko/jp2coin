@@ -6,3 +6,4 @@ export { default as DescriptionSection } from "./Description";
 export { default as NftSection } from "./Nft";
 export { default as ContactSection } from "./Contact";
 export { default as FooterSection } from "./Footer";
+export { default as UniswapSection } from "./Uniswap";

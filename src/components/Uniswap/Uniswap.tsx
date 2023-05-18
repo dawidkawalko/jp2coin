@@ -11,7 +11,7 @@ const Uniswap = () => {
           src="https://app.uniswap.org/#/swap?outputCurrency=0x5349874977eBD48810008567ada7Dbbf0f401b94"
           height="660px"
           width="100%"
-          sx={{ border: 0 }}
+          sx={{ border: 1, borderColor: "gold" }}
         />
       </Box>
     </>

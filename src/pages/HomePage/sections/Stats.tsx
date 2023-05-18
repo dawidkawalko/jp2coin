@@ -6,7 +6,7 @@ const StatsSection = () => {
     <Grid item xs={12}>
       <Box
         component={Paper}
-        elevation={5}
+        elevation={3}
         display="flex"
         justifyContent="space-around"
         py={5}

@@ -25,7 +25,7 @@ const LoadingPage = () => {
         component="img"
         alt="Loading"
         src={appImages.coin.src}
-        sx={{ height: { xs: "300px", md: "400px", lg: "500px" } }}
+        sx={{ height: { xs: "200px", sm: "300px", md: "350px", lg: "400px" } }}
       />
     </Box>
   );

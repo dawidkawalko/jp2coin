@@ -1,6 +1,5 @@
 import { Box, Grid, Typography } from "@mui/material";
 import { Section } from "../../../components/Section";
-import { Uniswap } from "../../../components/Uniswap";
 
 const StepsSection = () => {
   return (
@@ -50,7 +49,6 @@ const StepsSection = () => {
           <br />
           Swap ETH for JP2 and wait for the transaction to complete.
         </Section>
-        {/* <Uniswap /> */}
       </Grid>
     </>
   );

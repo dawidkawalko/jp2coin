@@ -19,6 +19,7 @@ const ThemeToggler = () => {
       }}
     >
       <Switch
+        color="secondary"
         checked={theme.palette.mode === "dark"}
         onChange={colorMode.toggleColorMode}
       />{" "}

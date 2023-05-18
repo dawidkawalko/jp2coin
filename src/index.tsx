@@ -4,6 +4,10 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import App from "./components/App";
 
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
+
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );

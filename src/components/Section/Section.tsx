@@ -9,7 +9,7 @@ const Section = ({ title, children }: SectionProps) => {
   return (
     <Box
       component={Paper}
-      elevation={5}
+      elevation={3}
       display="flex"
       flexDirection="column"
       justifyContent="flex-start"

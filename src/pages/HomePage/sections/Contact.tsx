@@ -10,7 +10,6 @@ import {
 } from "@mui/material";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import "reactjs-popup/dist/index.css";
 
 const ContactSection = () => {
   const formRef = useRef<any>();

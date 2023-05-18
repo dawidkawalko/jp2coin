@@ -11,6 +11,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import ThemeToggler from "../ThemeToggler";
 import useAppImages from "../../hooks/useAppImages";
+import { isMobile } from "react-device-detect";
 
 const pages = ["get your coin", "uniswap", "whitepaper", "nft", "contact"];
 const title = "JP2Coin";
@@ -18,7 +19,7 @@ const title = "JP2Coin";
 const smoothScroll = (anchor: string) => {
   document
     .querySelector(`#${anchor.replaceAll(" ", "")}`)
-    ?.scrollIntoView({ behavior: "smooth" });
+    ?.scrollIntoView({ behavior: isMobile ? "auto" : "smooth" });
 };
 
 const TopBar = () => {

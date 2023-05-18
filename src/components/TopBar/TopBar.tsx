@@ -145,9 +145,9 @@ const TopBar = () => {
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 0 }}>
+          {/* <Box sx={{ flexGrow: 0 }}>
             <ThemeToggler />
-          </Box>
+          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>

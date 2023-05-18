@@ -59,7 +59,7 @@ const App = () => {
           fontFamily: "Roboto",
         },
         palette: {
-          mode: mode,
+          mode: "dark",
           secondary: {
             main: "#ffd700",
           },

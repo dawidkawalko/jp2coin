@@ -167,7 +167,11 @@ const ContactSection = () => {
         onClose={handleSuccessSnackbarClose}
         anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
       >
-        <Alert onClose={handleSuccessSnackbarClose} severity="info">
+        <Alert
+          onClose={handleSuccessSnackbarClose}
+          severity="info"
+          sx={{ backgroundColor: "gold", color: "black" }}
+        >
           Your message has been sent!
         </Alert>
       </Snackbar>

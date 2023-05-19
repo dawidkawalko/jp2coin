@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import useForm from "../../../hooks/useForm";
 
 const ContactSection = () => {
   const formRef = useRef<any>();
@@ -39,15 +40,14 @@ const ContactSection = () => {
     setFailSnackbarOpen(false);
   };
 
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
+  const onSubmit = (trimmedData: Record<string, string>) => {
     setSending(true);
 
     emailjs
-      .sendForm(
+      .send(
         "service_z41ltns",
         "template_4n8qybq",
-        formRef.current,
+        trimmedData,
         "J5vUGf1itExGQcZeQ"
       )
       .then(
@@ -63,6 +63,15 @@ const ContactSection = () => {
         setSending(false);
       });
   };
+
+  const { data, errors, handleChange, handleSubmit } = useForm({
+    initialData: {
+      name: "",
+      email: "",
+      message: "",
+    },
+    onSubmit: onSubmit,
+  });
 
   return (
     <>
@@ -89,29 +98,32 @@ const ContactSection = () => {
             onSubmit={handleSubmit}
           >
             <TextField
-              required
               name="name"
               label="Your name"
-              type="text"
               variant="standard"
               color="secondary"
               fullWidth
               sx={{ mb: 3 }}
               disabled={sending}
+              value={data.name}
+              onChange={handleChange}
+              error={!!errors.name}
+              helperText={errors.name}
             />
             <TextField
-              required
               name="email"
               label="Your e-mail address"
-              type="email"
               variant="standard"
               color="secondary"
               fullWidth
               sx={{ mb: 3 }}
               disabled={sending}
+              value={data.email}
+              onChange={handleChange}
+              error={!!errors.email}
+              helperText={errors.email}
             />
             <TextField
-              required
               multiline
               name="message"
               label="Your message"
@@ -121,6 +133,10 @@ const ContactSection = () => {
               fullWidth
               sx={{ mb: 3 }}
               disabled={sending}
+              value={data.message}
+              onChange={handleChange}
+              error={!!errors.message}
+              helperText={errors.message}
             />
             <Box display="flex">
               <Box sx={{ flexGrow: 1 }}></Box>

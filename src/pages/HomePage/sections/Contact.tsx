@@ -12,6 +12,27 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import useForm from "../../../hooks/useForm";
 
+interface FormTextFieldProps {
+  name: string;
+  errors: Record<string, string>;
+  [key: string]: {};
+}
+
+const FormTextField = ({ name, errors, ...props }: FormTextFieldProps) => {
+  return (
+    <TextField
+      variant="standard"
+      color="secondary"
+      fullWidth
+      sx={{ mb: 3 }}
+      name={name}
+      error={!!errors[name]}
+      helperText={errors[name]}
+      {...props}
+    />
+  );
+};
+
 const ContactSection = () => {
   const formRef = useRef<any>();
   const [sending, setSending] = useState(false);
@@ -53,7 +74,7 @@ const ContactSection = () => {
       .then(
         () => {
           setSuccessSnackbarOpen(true);
-          formRef.current.reset();
+          reset();
         },
         () => {
           setFailSnackbarOpen(true);
@@ -64,7 +85,7 @@ const ContactSection = () => {
       });
   };
 
-  const { data, errors, handleChange, handleSubmit } = useForm({
+  const { data, errors, handleChange, handleSubmit, reset } = useForm({
     initialData: {
       name: "",
       email: "",
@@ -76,7 +97,6 @@ const ContactSection = () => {
   return (
     <>
       <Box className="anchor" id="contact"></Box>
-
       <Grid item container justifyContent="center" mt={5}>
         <Grid item xs={10}>
           <Typography
@@ -97,46 +117,31 @@ const ContactSection = () => {
             autoComplete="off"
             onSubmit={handleSubmit}
           >
-            <TextField
+            <FormTextField
               name="name"
               label="Your name"
-              variant="standard"
-              color="secondary"
-              fullWidth
-              sx={{ mb: 3 }}
-              disabled={sending}
+              errors={errors}
               value={data.name}
               onChange={handleChange}
-              error={!!errors.name}
-              helperText={errors.name}
-            />
-            <TextField
-              name="email"
-              label="Your e-mail address"
-              variant="standard"
-              color="secondary"
-              fullWidth
-              sx={{ mb: 3 }}
               disabled={sending}
+            />
+            <FormTextField
+              name="email"
+              label="Your email address"
+              errors={errors}
               value={data.email}
               onChange={handleChange}
-              error={!!errors.email}
-              helperText={errors.email}
+              disabled={sending}
             />
-            <TextField
-              multiline
+            <FormTextField
               name="message"
               label="Your message"
-              variant="outlined"
-              color="secondary"
-              minRows={5}
-              fullWidth
-              sx={{ mb: 3 }}
-              disabled={sending}
+              errors={errors}
               value={data.message}
               onChange={handleChange}
-              error={!!errors.message}
-              helperText={errors.message}
+              disabled={sending}
+              multiline
+              minRows={5}
             />
             <Box display="flex">
               <Box sx={{ flexGrow: 1 }}></Box>

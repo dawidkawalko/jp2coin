@@ -56,7 +56,11 @@ const useForm = ({ initialData, onSubmit }: UseFormProps) => {
     }
   };
 
-  return { data, errors, handleChange, handleSubmit };
+  const reset = () => {
+    setData(initialData);
+  };
+
+  return { data, errors, handleChange, handleSubmit, reset };
 };
 
 export default useForm;
